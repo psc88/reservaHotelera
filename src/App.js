@@ -1,10 +1,22 @@
+import Header from './components/Header';
+import Home from './components/Home';
+import SearchPage from './components/SearchPage';
 import { Counter } from './features/counter/Counter';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
   return (
-    <div>
-      <h1>Esto es el directazooo</h1>
-    </div>
+    <Router>
+      <Header/>
+      <Switch>
+        <Route path="/search">
+          <SearchPage/>
+        </Route>
+        <Route path="/">
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
