@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/reservaHotelera/static/css/main.6beafda0.chunk.css",
+    "main.js": "/reservaHotelera/static/js/main.aff0d876.chunk.js",
+    "main.js.map": "/reservaHotelera/static/js/main.aff0d876.chunk.js.map",
+    "runtime-main.js": "/reservaHotelera/static/js/runtime-main.e4d8b8e2.js",
+    "runtime-main.js.map": "/reservaHotelera/static/js/runtime-main.e4d8b8e2.js.map",
+    "static/js/2.c6643b87.chunk.js": "/reservaHotelera/static/js/2.c6643b87.chunk.js",
+    "static/js/2.c6643b87.chunk.js.map": "/reservaHotelera/static/js/2.c6643b87.chunk.js.map",
+    "index.html": "/reservaHotelera/index.html",
+    "static/css/main.6beafda0.chunk.css.map": "/reservaHotelera/static/css/main.6beafda0.chunk.css.map",
+    "static/js/2.c6643b87.chunk.js.LICENSE.txt": "/reservaHotelera/static/js/2.c6643b87.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4d8b8e2.js",
+    "static/js/2.c6643b87.chunk.js",
+    "static/css/main.6beafda0.chunk.css",
+    "static/js/main.aff0d876.chunk.js"
+  ]
+}
