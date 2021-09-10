@@ -7,4 +7,4 @@
 - importamos Router, Switch, Route; y creamos los switch para poner las rutas
 - Header :  displayDesktop() , displayMobile() 
 - instalamos add @material-ui/core and @material-ui/icons
-- Header : displayDesktop (agregar imagen y navbar)
+- Header : displayDesktop (agregar imagen y Header)
