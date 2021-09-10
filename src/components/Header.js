@@ -1,7 +1,11 @@
 import {
   AppBar,
   Avatar,
+  Drawer,
+  IconButton,
   InputBase,
+  List,
+  ListItem,
   makeStyles,
   Toolbar,
   Typography,
@@ -9,12 +13,55 @@ import {
 import { useState } from "react";
 import logo from "../imagenes/logoHotel.png";
 import SearchIcon from "@material-ui/icons/Search";
-import shadows from "@material-ui/core/styles/shadows";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const Header = () => {
-  const [mobile, setMobile] = useState(false);
+  const [tablet, setTablet] = useState(true);
+  const [draweropen, setDraweropen]=useState(false);
   const classes = useStyle();
-  const displayMobile = () => {};
+
+  const displayTablet = () => {
+    const handleDrawerOpen = () => {
+        setDraweropen(true)
+    }
+    const handleDrawerClose = () => {
+        setDraweropen(false)
+    }
+    const headersData = ["My account", "Previous bookings", "Log out"]
+    const getDrawerChoices = () => {
+        return headersData.map((data) => {
+            return (
+                <List>
+                    <ListItem>{data}</ListItem>
+                </List>
+            )
+        })
+    }
+
+    return (
+      <Toolbar>
+        <IconButton
+          {...{
+            edge: "start",
+            color: "#ccc",
+            "aria-label": "menu",
+            "arial-haspopup": "true",
+            onClick: handleDrawerOpen,
+          }}
+        >
+          <MenuIcon fontSize="large" />
+        </IconButton>
+        <Drawer {...{
+            anchor: "left",
+            open: draweropen,
+            onClose: handleDrawerClose,
+        }}>
+            <div>{getDrawerChoices()}</div>
+        </Drawer>
+      </Toolbar>
+    );
+  };
+
   const displayDesktop = () => (
     <Toolbar className={classes.toolbar}>
       <img src={logo} className={classes.logo} />
@@ -35,7 +82,7 @@ const Header = () => {
 
   return (
     <AppBar className={classes.root}>
-      {mobile ? displayMobile() : displayDesktop()}
+      {tablet ? displayTablet() : displayDesktop()}
     </AppBar>
   );
 };
@@ -59,7 +106,7 @@ const useStyle = makeStyles((theme) => ({
     objectFit: "contain",
     borderRadius: "50px",
     boxShadow: "5px 5px rgba(0, 0, 0, 0.5)",
-    opacity: "0.7"
+    opacity: "0.7",
   },
   center: {
     display: "flex",
